@@ -1,5 +1,5 @@
 # BloodBank
-A blood bank management system <br>
+A blood bank management system <br> <br>  <br>
 Overview: 
 This project is a comprehensive Database Management System (DBMS) designed to manage and optimize the operations of blood banks, hospitals, and donors. It provides a centralized platform that enables different users to interact with the system based on their roles, including viewing blood stock, requesting blood,  donating blood, and monitoring donation history.
 
