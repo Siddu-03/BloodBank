@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accident Reports</title>
+  <link rel="stylesheet" href="css/accidents-style.css">
+</head>
+<body>
+  <h1>Accident Reports</h1>
+
+  <table border="1">
+    <tr>
+      <th>ID</th><th>Location</th><th>Severity</th><th>Casualties</th><th>Reported By</th><th>Time</th>
+    </tr>
+    <tr>
+      <td>1</td><td>Main Street</td><td>Severe</td><td>2</td><td>Police</td><td>2025-04-22</td>
+    </tr>
+  </table>
+
+  <h2>Report a New Accident</h2>
+  <form action="/submit-accident" method="POST">
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location" required><br><br>
+
+    <label for="severity">Severity:</label><br>
+    <select id="severity" name="severity" required>
+      <option value="Minor">Minor</option>
+      <option value="Moderate">Moderate</option>
+      <option value="Severe">Severe</option>
+      <option value="Fatal">Fatal</option>
+    </select><br><br>
+
+    <label for="casualties">Number of Casualties:</label><br>
+    <input type="number" id="casualties" name="casualties" min="0" required><br><br>
+
+    <label for="reportedBy">Reported By:</label><br>
+    <input type="text" id="reportedBy" name="reportedBy" required><br><br>
+
+    <label for="time">Date and Time of Accident:</label><br>
+    <input type="datetime-local" id="time" name="time" required><br><br>
+
+    <label for="description">Detailed Description:</label><br>
+    <textarea id="description" name="description" rows="5" cols="40" placeholder="Describe what happened..."></textarea><br><br>
+
+    <label for="vehicles">Number of Vehicles Involved:</label><br>
+    <input type="number" id="vehicles" name="vehicles" min="0"><br><br>
+
+    <label for="witnesses">Witness Names (if any):</label><br>
+    <input type="text" id="witnesses" name="witnesses" placeholder="Comma-separated names"><br><br>
+
+    <label for="photos">Upload Photos (optional):</label><br>
+    <input type="file" id="photos" name="photos" multiple accept="image/*"><br><br>
+
+    <button type="submit">Submit Report</button>
+  </form>
+
+  <br>
+  <a href="index.html">Back</a>
+</body>
+</html>

@@ -1,0 +1,469 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+  }
+  
+  /* Layout Structure */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #e63946 0%, #a8201a 100%);
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  /* Map Container */
+  .map-interface {
+    display: flex;
+    height: calc(100% - 60px);
+  }
+  
+  #map {
+    flex: 1;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  /* Control Panel */
+  .control-panel {
+    width: 320px;
+    background: white;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 100;
+  }
+  
+  .control-panel.collapsed {
+    transform: translateX(320px);
+  }
+  
+  .panel-toggle {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    padding: 10px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  .panel-toggle:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Search Box */
+  .search-container {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .search-box {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+  }
+  
+  .search-box:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.3);
+    border-color: #e63946;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+  }
+  
+  /* Blood Bank List */
+  .blood-bank-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .blood-bank-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .blood-bank-item:hover {
+    background: #f9f9f9;
+  }
+  
+  .blood-bank-item.active {
+    background: rgba(230, 57, 70, 0.08);
+    border-left: 3px solid #e63946;
+  }
+  
+  .blood-bank-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .blood-bank-region {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  /* Filters */
+  .filters {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f5f7fa;
+    border-radius: 6px;
+  }
+  
+  .filter-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .filter-option {
+    display: inline-block;
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filter-option:hover {
+    border-color: #e63946;
+  }
+  
+  .filter-option.active {
+    background: #e63946;
+    color: white;
+    border-color: #e63946;
+  }
+  
+  /* Map Popup Customization */
+  .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaflet-popup-content {
+    margin: 0;
+    width: 280px !important;
+  }
+  
+  .popup-content {
+    padding: 15px;
+  }
+  
+  .popup-header {
+    background: #e63946;
+    color: white;
+    padding: 12px 15px;
+  }
+  
+  .popup-title {
+    font-weight: 600;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .popup-body {
+    padding: 15px;
+  }
+  
+  .popup-info {
+    margin-bottom: 10px;
+  }
+  
+  .popup-label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .popup-value {
+    color: #333;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .popup-button {
+    flex: 1;
+    padding: 8px 0;
+    text-align: center;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+  
+  .popup-button:hover {
+    background: #eee;
+  }
+  
+  .popup-button.primary {
+    background: #e63946;
+    color: white;
+    border-color: #e63946;
+  }
+  
+  .popup-button.primary:hover {
+    background: #d12838;
+  }
+  
+  /* Custom Marker Icon */
+  .blood-marker-icon {
+    background: #e63946;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .marker-icon-inner {
+    transform: rotate(45deg);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  /* Floating Action Controls */
+  .map-controls {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .map-control-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .map-control-button:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .map-control-icon {
+    width: 20px;
+    height: 20px;
+    color: #555;
+  }
+  
+  /* Legend */
+  .map-legend {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    border-radius: 6px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 900;
+    font-size: 0.85rem;
+  }
+  
+  .legend-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+  
+  /* Footer */
+  footer {
+    background: #f5f5f5;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #eee;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      padding: 0.75rem;
+    }
+    
+    h1 {
+      font-size: 1.25rem;
+    }
+    
+    .control-panel {
+      position: absolute;
+      width: 85%;
+      max-width: 320px;
+      height: 100%;
+      right: 0;
+      transform: translateX(100%);
+    }
+    
+    .control-panel.active {
+      transform: translateX(0);
+    }
+    
+    .panel-toggle {
+      left: -40px;
+    }
+    
+    .map-controls {
+      top: auto;
+      bottom: 20px;
+      right: 20px;
+    }
+    
+    .mobile-search-trigger {
+      display: block;
+      position: absolute;
+      top: 80px;
+      left: 20px;
+      z-index: 900;
+    }
+    
+    .search-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 950;
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+    }
+    
+    .search-overlay.active {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  /* Utility Classes */
+  .d-flex {
+    display: flex;
+  }
+  
+  .align-center {
+    align-items: center;
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+  
+  .hidden {
+    display: none;
+  }
