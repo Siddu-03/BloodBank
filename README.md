@@ -3,7 +3,7 @@
 <p>
   <img src="https://img.shields.io/badge/status-In_Development-orange" />
   <img src="https://img.shields.io/badge/Made%20with-PHP-blue" />
-  <img src="https://img.shields.io/badge/license-MIT-green" />
+  
 </p>
 
 <blockquote>
@@ -132,12 +132,6 @@
 
 <hr />
 
-<h2>🪪 License</h2>
-<p>
-  This project is open-sourced under the <a href="LICENSE">MIT License</a>.
-</p>
-
-<hr />
 
 <h2>❤️ Want to Contribute?</h2>
 <p>Pull requests are welcome! We’d love your help expanding:</p>
