@@ -64,7 +64,7 @@
 <h3>🛠️ Setup Instructions</h3>
 <ol>
   <li>Clone this repo:
-    <pre><code>git clone https://github.com/yourusername/bloodvault.git</code></pre>
+    <pre><code>git clone https://github.com/Siddu-03/BloodBank.git</code></pre>
   </li>
   <li>Import the database via phpMyAdmin:
     <ul>
