@@ -117,7 +117,7 @@
 
 <h2>👥 Meet the Team</h2>
 <ul>
-  <li><strong>Siddeshwarprasad K R</strong> – <a href="https://github.com/Siddu-03" target="_blank">GitHub</a></li>
+  <li><strong>Siddeshwarprasad K R</strong> – <a href="" target="_blank">LinkedIn</a></li>
   <li><strong>Shruti Roy</strong> – <a href="https://www.linkedin.com/in/shruti-roy-447981353/" target="_blank">LinkedIn</a></li>
   <li><strong>T Leha Reddy</strong> – <em>LinkedIn link coming soon</em></li>
 </ul>
