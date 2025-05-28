@@ -13,7 +13,7 @@
 <hr />
 
 <h2>📸 Project Banner</h2>
-<p><img src="BloodVault.png" alt="BloodVault Banner" /></p>
+<p><img src="assests/BloodVault.png" alt="BloodVault Banner" /></p>
 
 <hr />
 
