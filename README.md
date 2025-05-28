@@ -114,6 +114,14 @@
 <p>
   This system was built as part of a college-level database project, with a goal to modernize how blood donation and hospital coordination work.
 </p>
+
+<h2>👥 Meet the Team</h2>
+<ul>
+  <li><strong>Siddeshwarprasad K R</strong> – <a href="https://github.com/Siddu-03" target="_blank">GitHub</a></li>
+  <li><strong>Shruti Roy</strong> – <a href="https://www.linkedin.com/in/shruti-roy-447981353/" target="_blank">LinkedIn</a></li>
+  <li><strong>T Leha Reddy</strong> – <em>LinkedIn link coming soon</em></li>
+</ul>
+
 <blockquote>
   <strong>Special thanks to ChatGPT</strong> for assisting in every line of PHP and debugging like a real teammate 👨‍💻
 </blockquote>
