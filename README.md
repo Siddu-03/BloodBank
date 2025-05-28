@@ -78,18 +78,6 @@
 
 <hr />
 
-<h2>🔍 Screenshots</h2>
-<p><strong>Donor Dashboard</strong><br>
-<img src="screenshots/donor_dashboard.png" alt="Donor Dashboard" /></p>
-
-<p><strong>AI Predictions + Chatbot</strong><br>
-<img src="screenshots/ai_chat.png" alt="AI Chatbot" /></p>
-
-<p><strong>Blood Map</strong><br>
-<img src="screenshots/map_page.png" alt="Map" /></p>
-
-<hr />
-
 <h2>🧠 AI Chatbot Capabilities</h2>
 <ul>
   <li>100+ built-in Q&As</li>
